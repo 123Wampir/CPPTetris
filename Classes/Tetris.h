@@ -368,5 +368,7 @@ void TetrisGame::KeyPress()
 
 void TetrisGame::Destroy()
 {
+    for (int i = 0; i < heigth; i++)
+        delete[] grid[i];
     delete[] grid;
 }
